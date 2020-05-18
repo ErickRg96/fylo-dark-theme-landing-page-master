@@ -26,6 +26,7 @@
 body {
     color: white;
     font-family: var(--font-secondary);
+    overflow-x: hidden;
 }
 
 li {
