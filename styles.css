@@ -19,6 +19,7 @@
     --blue-testimonials-bg: hsl(219, 30%, 18%);
     --cyan: hsl(176, 68%, 64%);
     --blue: hsl(198, 60%, 50%);
+    --blue-hover: hsl(198, 99%, 27%);
     --white: hsl(0, 0%, 100%);
 }
 
@@ -71,6 +72,11 @@ a {
     font-family: var(--font-primary);
     font-weight: 400;
     font-size: 1em;
+    transition: .2s;
+}
+
+.nav__link:hover {
+    text-shadow: 1px 0px 9px rgba(255, 255, 255, 1);
 }
 
 
@@ -130,6 +136,11 @@ a {
     outline: none;
     transition: .3s;
     color: white;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--blue-hover);
 }
 
 /* FEATURES SECTION */
@@ -342,15 +353,19 @@ a {
     margin-top: 1.5em;
 }
 
+.button--form:hover {
+    background-color: var(--blue-hover);
+}
+
 /* FOOTER */
 .footer{
     background-color: var(--blue-footer-bg);
-    font-size: 14px;
-    border: 2px solid red;
+    font-size: 12px;
 }
 
 .footer__container{
     width: 90%;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 12em 0 2em;
 }
@@ -414,10 +429,6 @@ a {
 }
 
 @media screen and (min-width: 768px){
-    .footer {
-        font-size: 24px;
-    }
-
     .intro {
         font-size: 28px;
         background-image: url(./images/bg-curvy-desktop.svg);
@@ -454,13 +465,56 @@ a {
     }
 
     .sign-up{
-        background-color: var(--blue-main-bg);
-        font-size: 16px;
+        /* background-color: var(--blue-main-bg);
+        font-size: 16px; */
+    }
+
+    .sign-up__container {
+        padding: 1.5em 2.5em;
     }
 
     .sign-up__title{
-        background-color: var(--blue-main-bg);
         font-size: 2em;
+    }
+
+    .sign-up__description{
+        font-size: 1em;
+        width: 80%;
+    }
+
+    .footer {
+        font-size: 18px;
+    }
+
+    .footer__content {
+        display: flex;
+    }
+
+    .footer__contact {
+        width: 40%;
+    }
+
+    .footer__info {
+        width: 40%;
+        margin: 0 30px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .footer__list{
+        width: 50%;
+    }
+
+    .footer__item:first-child {
+        padding: 0;
+    }
+
+    .footer__social-networks{
+        width: 20%;
+    }
+
+    .footer__copy {
+        padding: 3em 0 0;
     }
 }
 
@@ -498,9 +552,8 @@ a {
     }
 
     .sign-up{
-        font-size: 20px;
+        font-size: 16px;
     }
-    
     
     .sign-up__form {
         flex-direction: row;
@@ -519,40 +572,14 @@ a {
         height: 53px;
         margin: 0;
     }
-
-    .footer__content {
-        display: flex;
-    }
-
-    .footer__contact {
-        width: 40%;
-    }
-
-    .footer__info {
-        width: 40%;
-        margin: 0 30px;
-        display: flex;
-        flex-direction: row;
-    }
-
-    .footer__list{
-        width: 50%;
-    }
-
-    .footer__item:first-child {
-        padding: 0;
-    }
-
-    .footer__social-networks{
-        width: 20%;
-    }
-
-    .footer__copy {
-        padding: 3em 0;
-    }
 }
 
 @media screen and (min-width: 1440px){
+    .intro {
+        background-position-y: 8em;
+        background-size: cover;
+    }
+
     .how-works{
         font-size: 32px;
     }
